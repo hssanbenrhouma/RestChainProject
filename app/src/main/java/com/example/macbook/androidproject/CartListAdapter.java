@@ -2,6 +2,7 @@ package com.example.macbook.androidproject;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class CartListAdapter extends RecyclerView.Adapter<CartListAdapter.MyViewHolder> {
@@ -52,7 +54,7 @@ public class CartListAdapter extends RecyclerView.Adapter<CartListAdapter.MyView
         final Meal item = cartList.get(position);
         holder.name.setText(item.getName());
         holder.description.setText(item.getDescription());
-        holder.price.setText("₹" + item.getPrice());
+        holder.price.setText(item.getPrice()+" TND");
 
         Glide.with(context)
                 .load(item.getThumbnail())

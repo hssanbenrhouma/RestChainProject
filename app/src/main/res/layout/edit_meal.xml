@@ -20,12 +20,12 @@
         android:paddingTop="60dp">
 
         <android.support.design.widget.TextInputLayout
-            android:id="@+id/input_layout_name"
+            android:id="@+id/input_layout_name_ed"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <EditText
-                android:id="@+id/input_name"
+                android:id="@+id/input_name_ed"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:singleLine="true"
@@ -33,12 +33,12 @@
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
-            android:id="@+id/input_layout_email"
+            android:id="@+id/input_layout_description_ed"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <EditText
-                android:id="@+id/input_description"
+                android:id="@+id/input_description_ed"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Description"
@@ -46,12 +46,12 @@
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
-            android:id="@+id/input_layout_password"
+            android:id="@+id/input_layout_password_ed"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <EditText
-                android:id="@+id/input_price"
+                android:id="@+id/input_price_ed"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="price"
@@ -61,51 +61,49 @@
         <!-- To display picture taken -->
 
         <ImageView
-            android:id="@+id/imgPreview"
+            android:id="@+id/imgPreview_ed"
             android:layout_width="fill_parent"
             android:layout_height="200dp"
             android:visibility="gone"
             android:layout_marginTop="15dp"/>
 
-
-        <TextView
-            android:id="@+id/txtPercentage"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="15dp"
-            android:layout_marginTop="15dp"
-            android:textColor="@color/design_default_color_primary"
-            android:textSize="30dp" />
-
-        <ProgressBar
-            android:id="@+id/progressBar"
-            style="?android:attr/progressBarStyleHorizontal"
-            android:layout_width="fill_parent"
-            android:layout_height="20dp"
-            android:layout_marginBottom="35dp"
-            android:visibility="gone"/>
-
         <Button
-            android:id="@+id/btnUpload"
+            android:id="@+id/btnUpload_ed"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:background="@color/design_default_color_primary"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
+            android:layout_marginTop="20dp"
             android:text="change image"
             android:textColor="@android:color/white"
             android:layout_marginBottom="20dp"/>
 
-        <Button android:id="@+id/btn_signup"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="Edit meal"
-            android:background="@color/colorPrimary"
-            android:layout_marginTop="40dp"
-            android:textColor="@android:color/white"/>
 
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/btn_meal_delete"
+        android:layout_width="142dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:background="@color/Red"
+        android:text="Delete meal"
+        android:textColor="@android:color/white" />
+
+    <Button
+        android:id="@+id/btn_meal_ed"
+        android:layout_width="168dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:background="@color/colorPrimary"
+        android:text="Edit meal"
+        android:layout_marginLeft="20dp"
+        android:textColor="@android:color/white" />
+</LinearLayout>
 
     </LinearLayout>
 

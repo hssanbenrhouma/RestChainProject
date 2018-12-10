@@ -1,5 +1,8 @@
 package com.example.macbook.androidproject;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Meal {
     int id;
     String name;
@@ -56,5 +59,28 @@ public class Meal {
 
     public void setThumbnail(String thumbnail) {
         this.thumbnail = thumbnail;
+    }
+
+    public Map<String, Object> toMap() {
+
+        HashMap<String, Object> result = new HashMap<>();
+        result.put("id", this.id);
+        result.put("name", this.name);
+        result.put("description", this.description);
+        result.put("price", this.price);
+        result.put("thumbnail", this.thumbnail);
+
+        return result;
+    }
+
+    @Override
+    public String toString() {
+        return "Meal{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", description='" + description + '\'' +
+                ", price=" + price +
+                ", thumbnail='" + thumbnail + '\'' +
+                '}';
     }
 }
